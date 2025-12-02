@@ -1,7 +1,11 @@
 _generate_compile_bash_prog() {
-	"$scriptAbsoluteLocation" _true
+	
+	"$scriptAbsoluteLocation" _compile_bash rOverrides.sh 
 	
 	return
+	# Legacy code below, kept for reference 
+		
+	"$scriptAbsoluteLocation" _true	 		# If no compiles are needed, this must be called before return 
 	
 	rm "$scriptAbsoluteFolder"/ubiquitous_bash.sh
 	
