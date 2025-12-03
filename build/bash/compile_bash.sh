@@ -1484,6 +1484,9 @@ _compile_bash() {
 		
 		_compile_bash_entry
 		_compile_bash_entry_prog
+
+		# Ensure repository-specific overrides are appended last so they supersede earlier definitions.
+		includeScriptList+=( "rOverrides.sh" )
 	else
 		includeScriptList+=( "generic"/rottenheader.sh )
 		#includeScriptList+=( "generic"/minimalheader.sh )
